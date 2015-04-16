@@ -1,0 +1,16 @@
+<p id="notice"><%= notice %></p>
+<h3>Quotes n' Jokes Ya'll</h3>
+
+
+<div id= "jokeform">
+ <%= render 'joke' %>
+</div>
+<div id= "quoteform">
+ <%= render 'quote' %>
+</div>
+<%= button_to "Joke Button","#", id: "jokeButton", :class => "button", :method => :get %> 
+<%= link_to 'New Joke', new_joke_path %>
+<br>
+<br>
+<%= button_to "Quote Button", "#", id: "quoteButton", :class => "button", :method => :get %>
+<%= link_to 'New Quote', new_quote_path %>
