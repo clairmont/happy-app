@@ -8,13 +8,11 @@
     </tr>
   </thead>
 
-  <tbody>
-   <% @jokes.each do |joke| %>
+ <tbody>
       <tr>
-        <td><%= joke.joke %></td>
-        <td><%= joke.punchline %></td>
+        <td><%= @jokes.joke %></td>
+        <td><%= @jokes.punchline %></td>
       </tr>
-   <% end %>
   </tbody>
 </table>
 <br>

@@ -1,7 +1,6 @@
 Rails.application.routes.draw do
   resources :mainpages
   resources :quotes
-  resources :quotes
   resources :jokes
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

@@ -10,6 +10,7 @@ class QuotesController < ApplicationController
   # GET /quotes/1
   # GET /quotes/1.json
   def show
+   @quote = Quote.offset(rand(Quote.count)).first
   end
 
   # GET /quotes/new

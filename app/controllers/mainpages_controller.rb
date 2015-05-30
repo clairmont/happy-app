@@ -4,9 +4,9 @@ class MainpagesController < ApplicationController
   # GET /mainpages
   # GET /mainpages.json
   def index
-    @jokes = Joke.all
+    @jokes = Joke.offset(rand(Joke.count)).first
     @random = Joke.all.shuffle
-    @quotes = Quote.all 
+    @quotes = Quote.offset(rand(Quote.count)).first
   end
 
   # GET /mainpages/1

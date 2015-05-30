@@ -9,12 +9,10 @@
   </thead>
 
   <tbody>
-    <% @quotes.each do |quote| %>
       <tr>
-        <td><%= quote.quote %></td>
-        <td><%= quote.author %></td>
+        <td><%= @quotes.quote %></td>
+        <td><%= @quotes.author %></td>
       </tr>
-    <% end %>
   </tbody>
 </table>
 <br>

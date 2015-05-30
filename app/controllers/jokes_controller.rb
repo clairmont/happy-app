@@ -10,10 +10,10 @@ class JokesController < ApplicationController
   # GET /jokes/1
   # GET /jokes/1.json
   def show
-   @randie = Joke.first(:offset => rand(Joke.count))
+   @joke = Joke.offset(rand(Joke.count)).first
   end
   def random
-  @randie = Joke.first
+  @random = Joke.first
   end
 
   # GET /jokes/new
