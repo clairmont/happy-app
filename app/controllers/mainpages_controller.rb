@@ -5,7 +5,8 @@ class MainpagesController < ApplicationController
   # GET /mainpages.json
   def index
     @jokes = Joke.offset(rand(Joke.count)).first
-    @random = Joke.all.shuffle
+    @random_joke = Joke.all.shuffle
+    @random_quote = Quote.all.shuffle
     @quotes = Quote.offset(rand(Quote.count)).first
   end
 

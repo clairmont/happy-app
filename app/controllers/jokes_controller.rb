@@ -4,7 +4,8 @@ class JokesController < ApplicationController
   # GET /jokes
   # GET /jokes.json
   def index
-    @jokes = Joke.all
+    #@jokes = Joke.all
+    @joke = Joke.offset(rand(Joke.count)).first
   end
 
   # GET /jokes/1

@@ -15,14 +15,23 @@
 //= require turbolinks
 //= require_tree .
 
+$ ->
+ $("#jokeButton").click ->
+  $.ajax(url: "/jokes").done (html) ->
+   $("body").html(html)
 
-$(document).on("click","#jokeButton",function(){
-$(quoteform).hide(); 
-$(jokeform).show();
-});
+$ ->
+  $("#quoteButton").click ->
+   $.ajax(url: "/quotes").done (html) ->
+    $("body").html(html)
 
-$(document).on("click","#quoteButton",function(){
- $(jokeform).hide();
- $(quoteform).show();
-});
+//$(document).on("click","#jokeButton",function(){
+//$(quoteform).hide(); 
+//$(jokeform).show();
+//});
+
+//$(document).on("click","#quoteButton",function(){
+// $(jokeform).hide();
+// $(quoteform).show();
+//});
 
